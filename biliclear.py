@@ -28,7 +28,6 @@ def saveConfig():
         f.write(json.dumps({
             "headers": headers,
             "bili_report_api": bili_report_api,
-            "csrf": csrf,
             "reply_limit": reply_limit,
             "enable_gpt": enable_gpt,
             "gpt_apibase": gpt.openai.api_base,

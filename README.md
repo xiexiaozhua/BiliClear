@@ -24,16 +24,9 @@
 ### 1. 源码安装
 
 - 克隆项目并安装依赖：
-  
   ```bash
   git clone https://github.com/qaqFei/BiliClear.git
   cd BiliClear
-  pip3 install -r ./requirements.txt
-  ```
-  
-  如果您使用多 Python 环境, 建议使用以下命令：
-  
-  ```bash
   pip install -r ./requirements.txt
   ```
 
@@ -51,18 +44,9 @@
   # 启动命令行版本
   python ./biliclear.py
   ```
-
-- **首次启动程序时**, 需提供以下参数：
-  - `Report sender email`: 📧 发送举报邮件的邮箱地址
-  - `Report sender password`: 🔑 邮箱的 SMTP 密钥（注意不是邮箱密码!）
-  - `Bilibili cookie`: 🍪 Bilibili 的 Cookie, 需定期更新
-  - `SMTP server`: ✉️ SMTP 服务器地址, 常见邮箱服务器会列出选项
-  - `SMTP port`: 🚪 SMTP 服务器端口
-
 ### 3. 处理异常
 
 - **与 `config.json` 相关的异常**：
-  - 更新 `config.json` 内的 Bilibili Cookie 或邮箱 SMTP 密钥
   - 如果问题无法解决, 可以删除 `config.json` 文件, 重新输入参数
   - 更新版本时建议删除旧的 `config.json` 文件, 以防止 `KeyError` 错误
 
@@ -72,9 +56,6 @@
     2. **错误代码：-1073741819 (0xC0000005)**：问题可能与跨线程内存访问被拒绝有关。
 
     若遇到上述问题, 您可以尝试重新运行程序。目前尚无具体的复现或解决方案, 欢迎有能力的开发者帮助解决 QT GUI 相关问题！
-
-### 4. SMTP 服务器选择
-- 程序启动时, 会提供常见邮箱的 SMTP 服务器选项, 请选择对应的邮箱服务并提供相关端口。
 
 ---
 
@@ -99,7 +80,6 @@
     - `User-Agent`: 🔍 浏览器标识
     - `Cookie`: 🍪 B站api的请求头中的 `Cookie`
 - `bili_report_api`: 📡 是否调用B站api的举报接口
-- `csrf`: 🔐 B站api请求体中的 `csrf`
 - `reply_limit`: 🔒 单条视频获取评论的最大数量 尽量不要大于100 可能会被风控
 - `enable_gpt`: 🤖 是否启用GPT进行评论过滤
 - `gpt_apibase`: 🔗 GPT的API地址
