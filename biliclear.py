@@ -130,6 +130,10 @@ face_detector = cv2.CascadeClassifier("./res/haarcascade_frontalface_default.xml
 if not environ.get("gui", False):
     loaded_sleep_time = 3.0
     print(f"加载完成, BiliClear将在{loaded_sleep_time}s后开始运行")
+    print("Welcome to BiliClear 我们真诚感谢您选择使用本软件净化bilibli环境!")
+    time.sleep(0.3)
+    print("可以的话看看另一个作者的项目 举报涉证 github.com/xiexiaozhua/biliganbei")
+    time.sleep(0.3)
     time.sleep(loaded_sleep_time)
     syscmds.clearScreen()
 
